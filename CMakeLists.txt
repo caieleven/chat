@@ -16,10 +16,12 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 set(PROJECT_SOURCES
         main.cpp
-        widget.cpp
-        widget.h
-        widget.ui
+        #widget.cpp
+        #widget.h
+        #widget.ui
         socket_client.h socket_client.cpp
+        start.h start.cpp start.ui
+        json.hpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
