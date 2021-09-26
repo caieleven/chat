@@ -23,6 +23,8 @@ private slots:
     void on_register_2_clicked();
 
     void on_login_clicked();
+signals:
+    void sendUsername(std::string);
 
 private:
     Ui::Start *ui;

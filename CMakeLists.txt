@@ -22,6 +22,8 @@ set(PROJECT_SOURCES
         socket_client.h socket_client.cpp
         start.h start.cpp start.ui
         json.hpp
+        contacts.h contacts.cpp contacts.ui
+        dialog.h dialog.cpp dialog.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

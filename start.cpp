@@ -21,8 +21,9 @@ void Start::SendUserInfo(std::string& cmd)
     //msg["command"] = "register";
     QString username = ui->username->text();
     QString password = ui->password->text();
+    msg["command"] = cmd;
     msg["username"] = username.toStdString();
-    msg["password"] = username.toStdString();
+    msg["password"] = password.toStdString();
     std::string sendbuf = msg.dump();
     clnt_sock_->Send(sendbuf.c_str(), sendbuf.size());
 }
@@ -37,8 +38,13 @@ void Start::on_login_clicked()
 {
     std::string cmd("login");
     SendUserInfo(cmd);
-//    char buf[5];
-//    if(clnt_sock_->Recv(buf, sizeof(buf)) > 0)
-//        ui->label->setText("success");
+    char buf[5];
+    if(clnt_sock_->Recv(buf, sizeof(buf)) > 0)
+    {
+        std::string username = ui->username->text().toStdString();
+        emit sendUsername(username);
+        this->close();
+    }
+
 }
 
