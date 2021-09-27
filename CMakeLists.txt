@@ -24,6 +24,7 @@ set(PROJECT_SOURCES
         json.hpp
         contacts.h contacts.cpp contacts.ui
         dialog.h dialog.cpp dialog.ui
+        thread_pool.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

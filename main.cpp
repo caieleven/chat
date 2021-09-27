@@ -3,10 +3,14 @@
 #include "socket_client.h"
 #include "contacts.h"
 #include <QApplication>
+#include "thread_pool.h"
+
+ThreadPool threadpool(6);
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
     //Widget w;
     //w.show();
 //    Contacts mainwindow;

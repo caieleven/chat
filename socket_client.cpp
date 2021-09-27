@@ -27,7 +27,7 @@ bool socket_client::ConectToServer(const char *servIP, int servPort)
 
 int socket_client::Send(const char *buf, const int len)
 {
-    return send(mySocketfd, buf, len, 0);
+    return send(mySocketfd, buf, len + 1, 0);
 }
 
 int socket_client::Recv(char *buf, const int len)
@@ -35,6 +35,17 @@ int socket_client::Recv(char *buf, const int len)
     return recv(mySocketfd, buf, len, 0);
 }
 
+
+int socket_client::SendJson(json &sendData)
+{
+    std::string sendbuf = sendData.dump();
+    return 1;
+}
+
+int socket_client::RecvJson(json &recvData)
+{
+    return 1;
+}
 
 socket_client::~socket_client()
 {

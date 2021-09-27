@@ -24,10 +24,10 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QTextBrowser" name="textBrowser"/>
+     <widget class="QTextBrowser" name="msgBrowser"/>
     </item>
     <item>
-     <widget class="QTextEdit" name="textEdit">
+     <widget class="QTextEdit" name="textMsg">
       <property name="maximumSize">
        <size>
         <width>16777215</width>
@@ -40,7 +40,7 @@
      <widget class="QWidget" name="widget" native="true">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="send">
          <property name="text">
           <string>send</string>
          </property>
@@ -60,7 +60,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="exit">
          <property name="text">
           <string>exit</string>
          </property>
