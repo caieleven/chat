@@ -62,7 +62,6 @@ Thumbs.db
 # MinGW generated files
 *.Debug
 *.Release
-build
 
 # Python byte code
 *.pyc
@@ -72,5 +71,7 @@ build
 *.dll
 *.exe
 
-
+# server
+.vscode
+build
 
