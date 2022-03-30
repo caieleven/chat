@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 2.8)
+project(SERVER)
+
+find_package(Threads)
+aux_source_directory(. SRC)
+include_directories(.)
+set(CMAKE_BUILD_TYPE Debug)
+add_compile_options(-Wall -std=c++11)
+add_executable(server ${SRC})
+target_link_libraries(server ${CMAKE_THREAD_LIBS_INIT})
